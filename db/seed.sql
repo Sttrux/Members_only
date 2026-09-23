@@ -1,4 +1,3 @@
-CREATE DATABASE "social-demo" WITH OWNER strux;
 
 -- Después de crear la BD, conéctate a social-demo
 -- \c "social-demo"
