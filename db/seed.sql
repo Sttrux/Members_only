@@ -28,41 +28,41 @@ CREATE TABLE IF NOT EXISTS posts (
 -- Estos valores son solamente ejemplos de hashes.
 -- Genera los tuyos con bcrypt.hash() desde Node.
 
-INSERT INTO users (username, password, email, is_member)
-VALUES
-    (
-        'strux',
-        '$2b$10$REEMPLAZAR_CON_HASH_REAL',
-        'strux@example.com',
-        TRUE
-    ),
-    (
-        'juan',
-        '$2b$10$REEMPLAZAR_CON_HASH_REAL',
-        'juan@example.com',
-        FALSE
-    ),
-    (
-        'maria',
-        '$2b$10$REEMPLAZAR_CON_HASH_REAL',
-        'maria@example.com',
-        TRUE
-    );
+-- INSERT INTO users (username, password, email, is_member)
+-- VALUES
+--     (
+--         'strux',
+--         '$2b$10$REEMPLAZAR_CON_HASH_REAL',
+--         'strux@example.com',
+--         TRUE
+--     ),
+--     (
+--         'juan',
+--         '$2b$10$REEMPLAZAR_CON_HASH_REAL',
+--         'juan@example.com',
+--         FALSE
+--     ),
+--     (
+--         'maria',
+--         '$2b$10$REEMPLAZAR_CON_HASH_REAL',
+--         'maria@example.com',
+--         TRUE
+--     );
 
-INSERT INTO posts (title, text, user_id)
-VALUES
-    (
-        'Mi primer post',
-        'Hola mundo desde mi aplicación.',
-        1
-    ),
-    (
-        'Aprendiendo Node',
-        'Estoy aprendiendo Express y PostgreSQL.',
-        1
-    ),
-    (
-        'Un post de Juan',
-        'Este es mi primer mensaje.',
-        2
-    );
+-- INSERT INTO posts (title, text, user_id)
+-- VALUES
+--     (
+--         'Mi primer post',
+--         'Hola mundo desde mi aplicación.',
+--         1
+--     ),
+--     (
+--         'Aprendiendo Node',
+--         'Estoy aprendiendo Express y PostgreSQL.',
+--         1
+--     ),
+--     (
+--         'Un post de Juan',
+--         'Este es mi primer mensaje.',
+--         2
+--     );
