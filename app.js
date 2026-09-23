@@ -34,7 +34,7 @@ app.use(passport.session());
 app.use("/", index_route);
 
 //Listening PORT
-const PORT = process.env.LISTEN_PORT || 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}`);
 });
