@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="./images/icon.png">
+
+    <title>Sub-Redit</title>
+  </head>
+
+  <body>
+    <%- include("header", { user: user }) %>
+
+    <main>
+      <div class="main-content">
+        <h2>Explore posts of our members!</h2>
+
+        <% posts.forEach(post => { %>
+
+          <div class="example-post">
+            <%if(post.username){%>
+              <p>Autor: <%= post.username%></p>
+            <%}else{%>
+            <p>Autor: Anonymous</p>
+
+            <%}%>
+
+            <p>Title: <%= post.title %></p>
+
+            <p><%= post.text %></p>
+
+           <p><%= new Date(post.created_at).toLocaleString() %></p>
+
+          </div>
+
+        <% }) %>
+
+      </div>
+      <% if (typeof user !== "undefined" && user) { %>
+      <div class="new-post">
+        <a href="new-post"><img src="./images/new-tab.svg" alt="Make new post" srcset=""></a>
+      </div>
+      <%}%>
+    </main>
+
+    <%- include("footer") %>
+  </body>
+</html>
+

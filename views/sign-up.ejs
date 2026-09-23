@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/sign-up.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./images/icon.png">
+    <title>Sub-Redit</title>
+  </head>
+  <body>
+    <%- include("header")%>
+    <main>
+  <% if (typeof success !== "undefined" && success !== null) { %>
+    <div class="dialog">
+    <p>Succesfully registered :DDDDD</p>
+    </div>
+  <% } %>
+
+  <% if (typeof errors !== "undefined" && errors !== null && errors.length > 0) { %>
+    <% errors.forEach(error => { %>
+      <div class="dialog">
+      <p><%= error.msg %></p>
+      </div>
+    <% }) %>
+  <% } %>
+
+        <form action="/sign-up" method="post">
+            <label for="username">Username</label>
+            <input required type="text" name="username" id="username">
+            <label for="email">Email</label>
+            <input required type="email" name="email" id="email">
+            <label for="password">Password</label>
+            <input required type="password" name="password" id="password">
+            <label for="confirm-password">Confirm Password</label>
+            <input required type="password" name="confirm-password" id="confirm-password">
+            <button type="submit">Create</button>
+        </form>
+    </main>
+
+    <%- include("footer")%>
+  </body>
+</html>

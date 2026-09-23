@@ -1,0 +1,17 @@
+<header>
+  <div class="title-container">
+  <a href="/"><img src="./images/logo.png" alt="Subredit-logo" srcset=""></a>
+  <h1><a href="/">Sub-Redit</a></h1>
+  </div>
+
+  <div class="auth-user">
+  
+<% if (typeof user !== "undefined" && user) { %>
+      <a id="a-logout" href="/logout">Logout</a>
+    <% } else { %>
+      <a id="a-login" href="/login">Login</a>
+      <a id="a-sign-up" href="/sign-up">Sign-up</a>
+    <% } %>
+
+  </div>
+</header>
